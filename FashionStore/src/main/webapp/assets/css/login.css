@@ -1,0 +1,146 @@
+
+.login-page {
+    min-height: 70vh;
+    padding: 55px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-heading h1 {
+    font-size: 27px;
+    margin-bottom: 9px;
+    color: #222222;
+}
+
+.login-heading p {
+    color: #777777;
+    font-size: 14px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.login-form input:focus {
+    border-color: var(--primary-color, #222222);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -8px;
+}
+
+.forgot-password a {
+    color: #555555;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: var(--primary-color, #222222);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: var(--primary-hover, #444444);
+}
+
+.login-register {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+
+.login-register a {
+    color: var(--primary-color, #222222);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+.login-error,
+.login-success {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.login-error {
+    background: #fff0f0;
+    color: #b42318;
+    border: 1px solid #ffcaca;
+}
+
+.login-success {
+    background: #edfff3;
+    color: #18723b;
+    border: 1px solid #b9e7c9;
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        padding: 27px 20px;
+    }
+
+    .login-heading h1 {
+        font-size: 23px;
+    }
+}

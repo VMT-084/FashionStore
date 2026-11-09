@@ -1,0 +1,214 @@
+
+/* ==============================
+   PROFILE PAGE
+============================== */
+
+.profile-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.profile-heading {
+    margin-bottom: 30px;
+}
+
+.profile-heading h1 {
+    font-size: 29px;
+    color: var(--text-primary, #222);
+    margin-bottom: 8px;
+}
+
+.profile-heading p {
+    font-size: 14px;
+    color: var(--text-secondary, #777);
+}
+
+/* ==============================
+   PROFILE MESSAGE
+============================== */
+
+.profile-message {
+    padding: 13px 16px;
+    margin-bottom: 22px;
+    background: #eaf7ee;
+    color: #218044;
+    border: 1px solid #c8e8d1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ==============================
+   PROFILE CONTENT
+============================== */
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.profile-card {
+    background: var(--white, #fff);
+    padding: 28px;
+    border: 1px solid var(--border-color, #e5e5e5);
+    border-radius: var(--card-radius, 10px);
+}
+
+/* ==============================
+   CARD HEADING
+============================== */
+
+.profile-card-heading {
+    margin-bottom: 25px;
+}
+
+.profile-card-heading h2 {
+    font-size: 20px;
+    color: var(--text-primary, #222);
+    margin-bottom: 8px;
+}
+
+.profile-card-heading p {
+    font-size: 13px;
+    color: var(--text-secondary, #777);
+}
+
+/* ==============================
+   FORM ELEMENTS
+============================== */
+
+.profile-card form {
+    max-width: 650px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary, #333);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-primary, #222);
+    background: #fff;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color, #222);
+}
+
+.form-group input[readonly] {
+    background: #f5f5f5;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group small {
+    margin-top: 7px;
+    font-size: 12px;
+    color: var(--text-secondary, #777);
+}
+
+/* ==============================
+   SAVE BUTTON
+============================== */
+
+.save-btn {
+    padding: 13px 22px;
+    background: var(--primary-color, #222);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.save-btn:hover {
+    background: var(--primary-hover, #444);
+}
+
+/* ==============================
+   ACCOUNT SECURITY
+============================== */
+
+.security-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.security-card .profile-card-heading {
+    margin-bottom: 0;
+}
+
+.security-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 16px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-primary, #222);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.security-link:hover {
+    background: #f5f5f5;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 600px) {
+
+    .profile-container {
+        margin: 25px auto;
+        padding: 0 14px;
+    }
+
+    .profile-heading h1 {
+        font-size: 25px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .security-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .save-btn {
+        width: 100%;
+    }
+}

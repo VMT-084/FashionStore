@@ -1,0 +1,236 @@
+
+/* ================================
+   PRODUCT DETAILS PAGE
+================================ */
+
+.product-details-page {
+    max-width: var(--container-width, 1200px);
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--text-secondary, #777);
+}
+
+.breadcrumb a {
+    color: var(--text-secondary, #777);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color, #222);
+}
+
+.breadcrumb span:last-child {
+    color: var(--text-primary, #222);
+}
+
+/* Main Layout */
+
+.product-details-container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Product Image */
+
+.product-image-section {
+    background: #f7f7f7;
+    border-radius: var(--card-radius, 10px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-product-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Product Information */
+
+.product-info-section {
+    padding: 10px 0;
+}
+
+.product-info-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-primary, #222);
+    margin: 0 0 15px;
+}
+
+.product-price {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--primary-color, #222);
+    margin-bottom: 30px;
+}
+
+.product-description {
+    margin-bottom: 30px;
+}
+
+.product-description h3,
+.product-availability h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary, #222);
+}
+
+.product-description p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary, #666);
+}
+
+/* Variant Selection */
+
+.product-availability {
+    margin-bottom: 30px;
+}
+
+.variant-group,
+.quantity-group {
+    margin-bottom: 20px;
+}
+
+.variant-group label,
+.quantity-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.variant-group select,
+.quantity-group input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.variant-group select:focus,
+.quantity-group input:focus {
+    border-color: var(--primary-color, #222);
+}
+
+/* Add to Cart Button */
+
+.add-to-cart-button {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color, #222);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background: var(--primary-hover, #444);
+}
+
+/* Stock Message */
+
+.out-of-stock-message {
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Additional Information */
+
+.product-extra-info {
+    border-top: 1px solid var(--border-color, #ddd);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.product-extra-info p {
+    font-size: 14px;
+    color: var(--text-secondary, #666);
+    margin: 12px 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .product-details-page {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .product-details-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-info-section h1 {
+        font-size: 25px;
+    }
+
+    .product-price {
+        font-size: 23px;
+    }
+
+    .main-product-image {
+        max-height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .breadcrumb {
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    .product-info-section h1 {
+        font-size: 22px;
+    }
+
+    .variant-group select,
+    .quantity-group input,
+    .add-to-cart-button {
+        max-width: 100%;
+    }
+}
+
+/* Cart Feedback Message */
+
+.cart-message {
+    max-width: 350px;
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+}

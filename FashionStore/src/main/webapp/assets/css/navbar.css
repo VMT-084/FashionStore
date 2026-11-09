@@ -1,0 +1,96 @@
+
+/* =====================================
+   FASHION STORE - CATEGORY NAVBAR
+===================================== */
+
+.category-navbar {
+    width: 100%;
+    background-color: var(--white);
+    padding: 12px 0 16px;
+}
+
+.category-container {
+    width: 94%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.category-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* CATEGORY LINKS */
+
+.category-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 22px;
+
+    background-color: #F3F3F6;
+    color: var(--text-primary);
+
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    transition: all 0.25s ease;
+}
+
+.category-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* ACTIVE CATEGORY */
+
+.category-link.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.category-link.active:hover {
+    background-color: var(--primary-hover);
+    color: var(--white);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .category-navbar {
+        padding: 10px 0 14px;
+    }
+
+    .category-container {
+        gap: 9px;
+    }
+
+    .category-link {
+        padding: 9px 17px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .category-container {
+        width: 92%;
+    }
+
+    .category-link {
+        padding: 8px 15px;
+    }
+}

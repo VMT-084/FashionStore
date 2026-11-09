@@ -1,0 +1,123 @@
+
+/* =====================================
+   FASHION STORE - FOOTER
+===================================== */
+
+.site-footer {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+    width: 94%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+
+    padding: 45px 0;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 35px;
+}
+
+/* BRAND */
+
+.footer-logo {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--primary-color);
+}
+
+.footer-brand p {
+    max-width: 280px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* FOOTER SECTIONS */
+
+.footer-section h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 17px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 11px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.footer-section a {
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+/* COPYRIGHT */
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding: 18px 15px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 18px;
+        padding: 35px 0;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer-section li {
+        font-size: 12px;
+    }
+}

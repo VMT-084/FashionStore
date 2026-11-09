@@ -1,0 +1,227 @@
+
+/* ==============================
+   ORDER SUCCESS PAGE
+============================== */
+
+.success-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.success-card {
+    background: var(--white, #fff);
+    padding: 40px;
+    border: 1px solid var(--border-color, #e5e5e5);
+    border-radius: var(--card-radius, 10px);
+    box-shadow: var(--shadow, 0 4px 15px rgba(0, 0, 0, 0.05));
+    text-align: center;
+}
+
+/* ==============================
+   SUCCESS ICON
+============================== */
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #e8f7ed;
+    color: #218838;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.success-card h1 {
+    font-size: 28px;
+    color: var(--text-primary, #222);
+    margin-bottom: 12px;
+}
+
+.success-message {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    color: var(--text-secondary, #777);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   ORDER ID
+============================== */
+
+.order-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 25px;
+    background: #f7f7f7;
+    border-radius: 7px;
+}
+
+.order-id span {
+    color: var(--text-secondary, #777);
+    font-size: 14px;
+}
+
+.order-id strong {
+    font-size: 16px;
+    color: var(--text-primary, #222);
+}
+
+/* ==============================
+   ORDER DETAILS
+============================== */
+
+.order-details {
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color, #eee);
+    border-bottom: 1px solid var(--border-color, #eee);
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color, #eee);
+}
+
+.detail-row span {
+    color: var(--text-secondary, #777);
+}
+
+.detail-row strong {
+    color: var(--text-primary, #222);
+    text-align: right;
+}
+
+.detail-row:last-child strong {
+    font-size: 19px;
+}
+
+/* ==============================
+   DELIVERY DETAILS
+============================== */
+
+.delivery-details {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.delivery-details h2 {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: var(--text-primary, #222);
+}
+
+.delivery-details p {
+    margin-bottom: 7px;
+    font-size: 13px;
+    color: var(--text-secondary, #666);
+    line-height: 1.5;
+}
+
+.delivery-details p:first-of-type {
+    color: var(--text-primary, #222);
+    font-weight: 600;
+}
+
+/* ==============================
+   ACTION BUTTONS
+============================== */
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.primary-btn {
+    background: var(--primary-color, #222);
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background: var(--primary-hover, #444);
+}
+
+.secondary-btn {
+    background: #f1f1f1;
+    color: var(--text-primary, #222);
+}
+
+.secondary-btn:hover {
+    background: #e5e5e5;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 600px) {
+
+    .success-container {
+        margin: 25px auto;
+        padding: 0 14px;
+    }
+
+    .success-card {
+        padding: 25px 18px;
+    }
+
+    .success-card h1 {
+        font-size: 23px;
+    }
+
+    .success-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 32px;
+    }
+
+    .detail-row {
+        font-size: 13px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
