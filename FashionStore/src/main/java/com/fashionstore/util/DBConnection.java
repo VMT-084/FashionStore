@@ -1,3 +1,4 @@
+
 package com.fashionstore.util;
 
 import java.sql.Connection;
@@ -6,16 +7,32 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
+    private static final String HOST =
+            System.getenv("DB_HOST");
+
+    private static final String PORT =
+            System.getenv("DB_PORT");
+
+    private static final String DATABASE =
+            System.getenv("DB_NAME");
+
+    private static final String USERNAME =
+            System.getenv("DB_USER");
+
+    private static final String PASSWORD =
+            System.getenv("DB_PASSWORD");
+
+    private static final String URL =
+            "jdbc:mysql://" + HOST + ":" + PORT + "/"
+            + DATABASE
+            + "?sslMode=VERIFY_IDENTITY";
+
     public static Connection getConnection() throws SQLException {
 
-        String url = System.getenv("DB_URL");
-        String username = System.getenv("DB_USERNAME");
-        String password = System.getenv("DB_PASSWORD");
-
-        if (url == null || username == null || password == null) {
+        if (HOST == null || PORT == null || DATABASE == null
+                || USERNAME == null || PASSWORD == null) {
             throw new SQLException(
-                "Database environment variables are not configured."
-            );
+                    "Database environment variables are missing.");
         }
 
         try {
@@ -24,6 +41,6 @@ public class DBConnection {
             throw new SQLException("MySQL JDBC Driver not found.", e);
         }
 
-        return DriverManager.getConnection(url, username, password);
+        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
 }
