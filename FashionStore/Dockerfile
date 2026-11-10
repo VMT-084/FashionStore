@@ -26,8 +26,8 @@ RUN sed -i 's/port="8080"/port="10000"/' \
 
 # Deploy FashionStore as the root application
 COPY --from=build \
-    /app/target/FashionStore-0.0.1-SNAPSHOT.war \
-    /usr/local/tomcat/webapps/ROOT.war
+/app/target/FashionStore.war \
+/usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 10000
 
