@@ -11,7 +11,7 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-RUN mvn -B clean package -DskipTests
+RUN mvn -B clean package -DskipTests && ls -lah /app/target
 
 
 # Stage 2: Run the WAR using Tomcat
